@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+      font-family: 'poppins';
+}
+
+#brand {
+      font-family: 'poppins 300';
+}
+
+
+.underline-animation {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 2px;
+}
+
+.underline-animation::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0px;
+      left: 0;
+      padding: 10 10px;
+      background-color: white;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+}
+
+.underline-animation:hover::after {
+      transform: translateX(0%);
+}
+
+.logo {
+      transform: translate(-10%);
+      margin-top: 10px;
+}
+
+#banner-text {
+      font-family: sans-serif;
+      font-weight: 700;
+}
+
+.cart-icon {
+      position: relative;
+
+      span {
+            min-width: 20px;
+            text-align: center;
+            background-color: #8e2de2;
+            padding: 2.5px;
+            position: absolute;
+            top: -13px;
+            right: -14px;
+            font-size: 12px;
+            line-height: 1;
+            border-radius: 50%;
+      }
+}
+
+#newsletter-main {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      width: 100%;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f9f9f9 url("../src/Components/Assests/newsletter-bg.jpeg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
